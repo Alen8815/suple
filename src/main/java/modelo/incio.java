@@ -32,7 +32,6 @@ public class incio extends javax.swing.JFrame {
         RegistrarLibro = new javax.swing.JToggleButton();
         btnVerLibro = new javax.swing.JToggleButton();
         jToggleButton3 = new javax.swing.JToggleButton();
-        jToggleButton4 = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,9 +51,12 @@ public class incio extends javax.swing.JFrame {
             }
         });
 
-        jToggleButton3.setText("jToggleButton3");
-
-        jToggleButton4.setText("jToggleButton4");
+        jToggleButton3.setText("funcion libros base");
+        jToggleButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -67,10 +69,9 @@ public class incio extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jToggleButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnVerLibro, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RegistrarLibro, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(RegistrarLibro, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jToggleButton3))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -84,9 +85,7 @@ public class incio extends javax.swing.JFrame {
                 .addComponent(btnVerLibro)
                 .addGap(18, 18, 18)
                 .addComponent(jToggleButton3)
-                .addGap(21, 21, 21)
-                .addComponent(jToggleButton4)
-                .addContainerGap(169, Short.MAX_VALUE))
+                .addContainerGap(213, Short.MAX_VALUE))
         );
 
         jDesktopPane1.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -135,6 +134,13 @@ jDesktopPane1.add(frame);
     frame.setVisible(true);
     }//GEN-LAST:event_btnVerLibroActionPerformed
 
+    private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
+CrudibrosBase frame =new CrudibrosBase();
+
+jDesktopPane1.add(frame);
+    frame.setVisible(true);
+    }//GEN-LAST:event_jToggleButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -177,6 +183,5 @@ jDesktopPane1.add(frame);
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JToggleButton jToggleButton3;
-    private javax.swing.JToggleButton jToggleButton4;
     // End of variables declaration//GEN-END:variables
 }
